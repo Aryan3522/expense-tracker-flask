@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    button {
+        cursor: pointer;
+    }
+
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    .expenseANDincone {
+        background-color: rgb(40, 40, 40);
+        overflow-y: scroll;
+        /* padding-left: 200px; */
+        /* width: 400px; */
+        height: 200px;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: space-around;
+        /* align-items: center; */
+    }
+
+    .Income button {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+    }
+
+    .expense button {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+    }
+
+    .myInputFields {
+        /* padding:20px; */
+        background-color: rgb(40, 40, 40);
+    }
+
+    input {
+        margin-top: 5px;
+        border: none;
+        outline: none;
+        width: 270px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    label {
+        font-size: 13px;
+        font-family: sans-serif;
+    }
+
+    #income {
+        border: none;
+        border-radius: 10px;
+        padding: 7px;
+
+        color: white;
+        cursor: pointer;
+        background-color: rgb(116, 193, 0);
+    }
+
+    #Expense {
+        border: none;
+        border-radius: 10px;
+        padding: 7px;
+        color: white;
+        cursor: pointer;
+        background-color: rgb(230, 0, 0);
+    }
+</style>
+
+<body>
+
+    <!-- <img src="" alt=""> -->
+
+    <div class="mainContainer">
+        <h1 align="center">Expense Tracker</h1>
+    </div>
+
+
+
+    <div class="container-fluid" style="display: flex;">
+        <div class="container-sm"
+            style="border: 0px solid white;width: 25%;margin-right: 10px; background-color: rgb(40, 40, 40);border-radius:15px;height: 500px;">
+            <h4 style="display: flex;justify-content: center;">Income <span style="color: rgb(116, 193, 0);"
+                    id="myIncome"></span> </h4>
+            <ol id="ol-1" style="color: black;">
+                <li></li>
+                <!-- <button >sds</button> -->
+            </ol>
+        </div>
+
+        <div class="myInputFields"
+            style="padding-top: 30px;border-top:0px solid rgba(0, 0, 0, 0.238) ;width: 50%;margin: auto;border-radius: 15px;">
+
+            <form action="" style="border: 0px solid white;margin: auto;width:280px;">
+                <div class="fields">
+                    <label for="">Name of Transaction</label><br>
+                    <input type="text" name="" placeholder="Your transaction" id="Transaction">
+                </div>
+
+                <div class="fields" style="margin-top: 30px;">
+                    <label for="">Amount </label><br>
+                    <input type="text" placeholder="Enter amount" name="" id="amount">
+                </div>
+            </form>
+
+            <div class="myInputFields"
+                style="margin-top: 20px;padding-top: 20px;margin-left: 10px;border-top:0px solid rgba(0, 0, 0, 0.238) ;margin: auto;width: 30%;justify-content:space-evenly;align-items: center;display: flex;">
+                <button id="income">Income</button>
+                <button onclick="myFunction()" id="Expense">Expense</button>
+                <!-- <button id="my">Expense</button> -->
+            </div>
+
+
+            <div style="display: flex;justify-content: center;justify-content: center;">
+                <h4><span style="color:rgb(255,0, 238);font-size: 25px;">Balance :</span> <span
+                        style="color: rgb(242, 255, 0);font-size: 25px;" id="MyBalaance"></span></h4>
+
+            </div>
+
+        </div>
+        <div
+            style="border: 0px solid white;width: 25%;margin-left: 10px; background-color: rgb(40, 40, 40);border-radius:15px;height: 500px;">
+            <h4 style="display: flex;justify-content: center;border: 0px solid white;"> Expense <span
+                    style="color: red;" id="myExpense"> </span></h4>
+            <ol id="ol-2" style="color: black;">
+
+                <!-- <li>\</li> -->
+
+            </ol>
+        </div>
+
+
+    </div>
+    </div>
+
+
+    <script src="/static/js/expense.js"></script>
+
+</body>
+
+</html>
